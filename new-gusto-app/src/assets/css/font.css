@@ -1,8 +1,0 @@
-@font-face {
-    font-family: 'SGMatter-Regular';
-    src: url('../fonts/SGMatter-Regular.woff2') format('woff2'),
-        url('../fonts/SGMatter-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
