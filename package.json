@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/deckgo/deckdeckgo.git",
+    "url": "git@github.com:studiogustodev/create-gusto-app.git",
     "directory": "cli"
   },
   "files": [
@@ -27,15 +27,12 @@
     "rimraf": "^3.0.2",
     "terser": "^5.7.0"
   },
-  "author": "David Dal Busco",
+  "author": "Studio Gusto <https://www.studiogusto.com>",
   "license": "MIT",
   "keywords": [
-    "slide",
-    "slideshow",
-    "talk",
-    "cli",
-    "template",
-    "presentation"
+    "react",
+    "boilerplate",
+    "cli"
   ],
   "dependencies": {
     "cli-spinner": "^0.2.10",
