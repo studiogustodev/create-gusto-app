@@ -1,6 +1,6 @@
 {
   "name": "create-gusto-app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create a new Gusto boilerplate",
   "main": "dist/index.js",
   "scripts": {
