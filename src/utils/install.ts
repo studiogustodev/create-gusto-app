@@ -8,7 +8,7 @@ export const installDependencies = async (folder: string, step: string) => {
   loading.setSpinnerString(18);
   loading.start();
 
-  await npm('ci', folder);
+  await npm('install', folder);
 
   loading.stop(true);
 };

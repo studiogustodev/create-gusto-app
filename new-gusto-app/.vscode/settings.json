@@ -1,0 +1,21 @@
+{
+    "javascript.validate.enable": false,
+    "eslint.workingDirectories": [
+        {
+            "directory": "./",
+            "changeProcessCWD": true
+        }
+    ],
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "search.exclude": {
+        "**/.git": true,
+        "**/node_modules": true,
+        "**/dist": true,
+        "**/api": true,
+        "**/app/plugins": true,
+        "**/app/mu-plugins": true,
+        "**/app/themes/**/images": true,
+    },
+}

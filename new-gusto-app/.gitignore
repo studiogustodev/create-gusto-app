@@ -1,0 +1,16 @@
+.DS_Store
+sw.js
+sw.js.map
+/dist/
+/node_modules/
+/backup/
+/cms/wp/
+/cms/wp/wp-includes/
+/cms/wp/wp-admin/
+/cms/app/languages/
+/cms/app/uploads/
+/cms/app/upgrade/
+/cms/app/themes/*/dist
+/cms/app/themes/index.php
+/cms/app/index.php
+/_materiale/

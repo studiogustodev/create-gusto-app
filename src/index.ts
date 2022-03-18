@@ -1,12 +1,12 @@
-import { red } from 'colorette';
+import { red } from 'colorette'
 
-import { version } from '../package.json';
+import { version } from '../package.json'
 
-import { cleanup, nodeVersionWarning } from './utils/utils';
-import { initSimpleReactBoilerplate } from './simpleReactBoilerplate';
+import { cleanup, nodeVersionWarning } from './utils/utils'
+import { initSimpleReactBoilerplate } from './simpleReactBoilerplate'
 
 const USAGE_DOCS = `Usage:
-npm init deckdeckgo
+  npm init create-react-app
 `;
 
 interface GoalAnswer {
@@ -20,7 +20,7 @@ async function run() {
   const info = args.indexOf('--info') >= 0 || args.indexOf('--version') >= 0 || args.indexOf('--v') >= 0;
 
   if (info) {
-    console.log('create-deckdeckgo:', version, '\n');
+    console.log('create-gusto-app:', version, '\n');
     return 0;
   }
 
@@ -36,8 +36,6 @@ async function run() {
 
     if (answer.goal === 'Simple React Boilerplate') {
       await initSimpleReactBoilerplate();
-    } else if (answer.goal === 'WP React Boilerplate') {
-      console.log('No goal selected. Process aborted.');
     } else {
       console.log('No goal selected. Process aborted.');
     }
@@ -54,7 +52,7 @@ const ask = async (): Promise<GoalAnswer> => {
       type: 'list',
       name: 'goal',
       message: 'What do you want to create?',
-      choices: ['Simple React Boilerplate', 'WP React Boilerplate']
+      choices: ['Simple React Boilerplate']
     }
   ];
 

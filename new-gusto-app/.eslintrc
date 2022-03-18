@@ -1,0 +1,67 @@
+{
+  "extends": ["airbnb", "plugin:jsx-control-statements/recommended"],
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "ecmaVersion": 8,
+    "requireConfigFile": false,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "babelOptions": {
+      "presets": ["@babel/preset-react"]
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "plugins": ["react", "react-hooks", "react-memo", "jsx-control-statements"],
+  "rules": {
+    "space-before-function-paren": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/destructuring-assignment": "off",
+    "react/button-has-type": "off",
+    "react/prefer-stateless-function": "warn",
+    "react/no-access-state-in-setstate": "off",
+    "react/jsx-no-target-blank": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-no-undef": [2, { "allowGlobals": true }],
+    "linebreak-style": "off",
+    "global-require": "off",
+    "arrow-body-style": "off",
+    "semi": [2, "never"],
+    "max-len": "off",
+    "object-curly-newline": "off",
+    "no-return-assign": "off",
+    "dot-notation": "off",
+    "no-unexpected-multiline": 2,
+    "no-param-reassign": "off",
+    "import/no-extraneous-dependencies": "off",
+    "react/forbid-prop-types": "off",
+    "react/prop-types": "off",
+    "react/jsx-boolean-value": "off",
+    "react/no-danger": "off",
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
+    "jsx-a11y/label-has-associated-control": "off",
+    "jsx-a11y/anchor-is-valid": [ "error", {
+        "components": [ "Link" ],
+        "specialLink": [ "to", "hrefLeft", "hrefRight" ],
+        "aspects": [ "noHref", "invalidHref", "preferButton" ]
+      }],
+    "import/prefer-default-export": "off",
+    "camelcase": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["@", "./src"]
+        ],
+        "extensions": [".ts", ".js", ".jsx", ".json"]
+      }
+    }
+  }
+}

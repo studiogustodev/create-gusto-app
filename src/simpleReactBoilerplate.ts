@@ -13,10 +13,7 @@ interface Answers {
   folder: string;
   title: string;
   description: string;
-  author: string;
-  theme_color: string;
   site: string;
-  keywords: string;
 }
 
 export const initSimpleReactBoilerplate = async () => {
@@ -63,33 +60,9 @@ const prompt = (): Promise<Answers> => {
       message: "What's your website about (its description)?",
       default: ''
     },
-    {
-      type: 'input',
-      name: 'author',
-      message: "What's your name (will be use for the author meta information)?",
-      default: 'Studio Gusto <https://www.studiogusto.com>'
-    },
-    {
-      type: 'input',
-      name: 'site',
-      message: "What's the website URL?",
-      default: 'https://www.studiogusto.com'
-    },
-    {
-      type: 'input',
-      name: 'theme_color',
-      message: "What's the main website's color (hex - will be use for meta tags and manifest information)?",
-      default: '#000000'
-    },
-    {
-      type: 'input',
-      name: 'keywords',
-      message: "What's the main website's keywords (will be use for meta tags)?",
-      default: ''
-    }
   ];
 
-  console.log("\nCool, let's kick start a new " + cyan('Simple React starter-kit') + ' boilerplate\n');
+  console.log("\nCool, let's kick start a new " + cyan('Simple React') + ' boilerplate\n');
 
   const inquirer = require('inquirer');
 
@@ -152,10 +125,7 @@ const replaceAnswers = async (answers: Answers) => {
 
     data = data.replace(/{{GUSTO_TITLE}}/g, answers.title);
     data = data.replace(/{{GUSTO_DESCRIPTION}}/g, answers.description);
-    data = data.replace(/{{GUSTO_AUTHOR}}/g, answers.author);
     data = data.replace(/{{GUSTO_SITE}}/g, answers.site);
-    data = data.replace(/{{GUSTO_KEYWORDS}}/g, answers.keywords);
-    data = data.replace(/{{GUSTO_THEME_COLOR}}/g, answers.theme_color);
 
     await writeFile(filePath, data);
   }
