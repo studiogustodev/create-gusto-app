@@ -1,0 +1,48 @@
+{
+  "name": "create-gusto-app",
+  "version": "1.0.0",
+  "description": "Create a new Gusto boilerplate",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "build": "rimraf dist && node ./esbuild.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/deckgo/deckdeckgo.git",
+    "directory": "cli"
+  },
+  "files": [
+    "dist/index.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "bin": {
+    "create-gusto-app": "dist/index.js"
+  },
+  "devDependencies": {
+    "@types/cli-spinner": "^0.2.0",
+    "@types/inquirer": "7.3.1",
+    "@types/yauzl": "^2.9.1",
+    "rimraf": "^3.0.2",
+    "terser": "^5.7.0"
+  },
+  "author": "David Dal Busco",
+  "license": "MIT",
+  "keywords": [
+    "slide",
+    "slideshow",
+    "talk",
+    "cli",
+    "template",
+    "presentation"
+  ],
+  "dependencies": {
+    "cli-spinner": "^0.2.10",
+    "colorette": "^1.2.2",
+    "esbuild": "^0.14.27",
+    "global": "^4.4.0",
+    "inquirer": "^8.0.0",
+    "yauzl": "^2.10.0"
+  }
+}
