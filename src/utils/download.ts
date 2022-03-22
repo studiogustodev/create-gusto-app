@@ -6,6 +6,10 @@ export function downloadStarterMain() {
   return downloadFromURL(`https://github.com/studiogustodev/starter-kit-simple-react/archive/master.zip`);
 }
 
+export function downloadStarterWp() {
+  return downloadFromURL(`https://github.com/studiogustodev/starter-kit-wp-react/archive/master.zip`);
+}
+
 export function downloadFontsKey() {
   return downloadFromURL(`https://api.deckdeckgo.com/googlefonts/`);
 }

@@ -4,6 +4,7 @@ import { version } from '../package.json'
 
 import { cleanup, nodeVersionWarning } from './utils/utils'
 import { initSimpleReactBoilerplate } from './simpleReactBoilerplate'
+import { initWpReactBoilerplate } from './wpReactBoilerplate'
 
 const USAGE_DOCS = `Usage:
   npm init create-react-app
@@ -37,7 +38,7 @@ async function run() {
     if (answer.goal === 'Simple React Boilerplate') {
       await initSimpleReactBoilerplate();
     } else {
-      console.log('No goal selected. Process aborted.');
+      await initWpReactBoilerplate();
     }
   } catch (e) {
     console.error(`\n${red('✖')} ${e}\n`);
@@ -52,7 +53,7 @@ const ask = async (): Promise<GoalAnswer> => {
       type: 'list',
       name: 'goal',
       message: 'What do you want to create?',
-      choices: ['Simple React Boilerplate']
+      choices: ['Simple React Boilerplate', 'WP React Boilerplate']
     }
   ];
 
